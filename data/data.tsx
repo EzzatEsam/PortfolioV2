@@ -7,12 +7,21 @@ import {
   SiTensorflow,
   SiPandas,
   SiScikitlearn,
+  SiApachehadoop,
+  SiFastapi,
+  SiFlutter,
+  SiFlask,
+  SiDjango,
+  SiGodotengine,
+  SiFirebase,
+  SiUnity,
+  SiMysql,
+  SiMongodb,
+  SiNextdotjs,
 } from "react-icons/si";
 import { FaPython, FaReact } from "react-icons/fa";
 import { FaGolang } from "react-icons/fa6";
 
-import * as IconsFa from "react-icons/fa";
-import * as IconsSi from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
 import { ProjectData } from "@/types/ProjectData";
 import { DiSpark } from "react-icons/di";
@@ -25,7 +34,7 @@ interface data {
   myEducation: TimelineEvent[];
   educationSummary: string;
   myPhone: string;
-  myAddr : string
+  myAddr: string;
   links: {
     myLinkedin: string;
     myGithub: string;
@@ -60,7 +69,7 @@ export const MyData: data = {
       description: "Thanwya amma - Math - 98.4 %",
     },
   ],
-  myAddr : "October Gardens, 6th of October City, Giza, Egypt",
+  myAddr: "October Gardens, 6th of October City, Giza, Egypt",
   myPhone: "+201 016 475 725",
   educationSummary:
     "I graduated from zewail city of science and technology in 2024 with a 3.6/4 GPA. I have a BSc in Communication and Information Engineering",
@@ -120,11 +129,11 @@ export const MyData: data = {
         {
           name: "Hadoop",
 
-          logo: <IconsSi.SiApachehadoop size={25} />,
+          logo: <SiApachehadoop size={25} />,
         },
         // {
         //   name: "OpenCV",
-        //   logo: <IconsSi.SiOpencv size={25} color="red" />,
+        //   logo: <SiOpencv size={25} color="red" />,
         // },
       ],
     },
@@ -137,7 +146,7 @@ export const MyData: data = {
         },
         {
           name: "FLutter",
-          logo: <IconsSi.SiFlutter size={25} color="#5AC2F0" />,
+          logo: <SiFlutter size={25} color="#5AC2F0" />,
         },
       ],
     },
@@ -146,19 +155,19 @@ export const MyData: data = {
       innerSKills: [
         {
           name: "FastAPI",
-          logo: <IconsSi.SiFastapi size={25} />,
+          logo: <SiFastapi size={25} />,
         },
         {
           name: "Flask",
-          logo: <IconsSi.SiFlask size={25} />,
+          logo: <SiFlask size={25} />,
         },
         {
           name: "Django",
-          logo: <IconsSi.SiDjango size={25} color="#2AA473" />,
+          logo: <SiDjango size={25} color="#2AA473" />,
         },
         {
           name: "NextJS",
-          logo: <IconsSi.SiNextdotjs size={25} />,
+          logo: <SiNextdotjs size={25} />,
         },
       ],
     },
@@ -167,15 +176,15 @@ export const MyData: data = {
       innerSKills: [
         {
           name: "MongoDB",
-          logo: <IconsSi.SiMongodb size={25} color="green" />,
+          logo: <SiMongodb size={25} color="green" />,
         },
         {
           name: "MySql",
-          logo: <IconsSi.SiMysql size={25} />,
+          logo: <SiMysql size={25} />,
         },
         {
           name: "Firebase",
-          logo: <IconsSi.SiFirebase size={25} color="#FFC400" />,
+          logo: <SiFirebase size={25} color="#FFC400" />,
         },
       ],
     },
@@ -184,11 +193,11 @@ export const MyData: data = {
       innerSKills: [
         {
           name: "Unity",
-          logo: <IconsSi.SiUnity size={25} />,
+          logo: <SiUnity size={25} />,
         },
         {
           name: "Godot",
-          logo: <IconsSi.SiGodotengine size={25} color="#53A4E0" />,
+          logo: <SiGodotengine size={25} color="#53A4E0" />,
         },
       ],
     },
