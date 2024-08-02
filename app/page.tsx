@@ -26,7 +26,7 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center">
         <img
-          src={"/pic.png"}
+          src={"/pic.jpg"}
           alt="my pic"
           className="mx-8 w-1/2 rounded-full"
         />
