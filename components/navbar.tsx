@@ -5,6 +5,8 @@ import {
   NavbarMenuToggle,
   NavbarBrand,
   NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
 } from "@nextui-org/navbar";
 
 import { Link } from "@nextui-org/link";
@@ -28,6 +30,8 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar maxWidth="xl" position="sticky" isBordered>
+      <NavbarMenuToggle className="sm:hidden"></NavbarMenuToggle>
+
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="max-w-fit gap-3">
           <NextLink className="flex items-center justify-start gap-1" href="/">
@@ -90,12 +94,45 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="basis-1 pl-4 sm:hidden" justify="end">
+        <Link
+          isExternal
+          aria-label="Email"
+          href={`mailto:${MyData.links.myEmail}`}
+        >
+          <Tooltip
+            showArrow={true}
+            content={`Email: ${MyData.links.myEmail}`}
+            placement="bottom"
+          >
+            <IconEmailOutline className="text-default-500" />
+          </Tooltip>
+        </Link>
+
+        <Link isExternal aria-label="Itchio" href={MyData.links.myItchIo}>
+          <IconItchIo className="text-default-500" />
+        </Link>
+        <Link isExternal aria-label="Linkedin" href={siteConfig.links.linkedin}>
+          <IconLinkedin className="text-default-500" />
+        </Link>
         <Link isExternal aria-label="Github" href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
         </Link>
         <ThemeSwitch />
-        <NavbarMenuToggle />
       </NavbarContent>
+      <NavbarMenu>
+        {siteConfig.navItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              className="w-full"
+              color={pathname === item.href ? "primary" : "foreground"}
+              href={item.href}
+              size="lg"
+            >
+              {item.label}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </NextUINavbar>
   );
 };
