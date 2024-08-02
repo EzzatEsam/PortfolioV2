@@ -32,6 +32,7 @@ interface data {
   myDiscription: string;
   myTitle: string;
   myEducation: TimelineEvent[];
+  myExperience: TimelineEvent[];
   educationSummary: string;
   myPhone: string;
   myAddr: string;
@@ -57,6 +58,22 @@ export const MyData: data = {
     myItchIo: "https://ezzatesam.itch.io/",
   },
   myTitle: "Communication and Information Engineer",
+  myExperience: [
+    {
+      title: " Intern, Using AI in wireless communications",
+      date: "July 2023 - September 2023",
+      location: "Zewail city of science and technology",
+      description:
+        "Developed a ML pipeline for predicting the throughput of a 5G mobile network using environmental data",
+    },
+    {
+      title: "Intern, Robotics",
+      date: "July 2023 - September 2023",
+      location: "Zewail city of science and technology",
+      description:
+        " Used ROS (Robot Operating System) , moveit library and OpenCV to control a robotic arm controlled by an Arduino using feed from a connected camera.",
+    },
+  ],
   myEducation: [
     {
       date: "2019- 2024",
