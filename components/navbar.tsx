@@ -30,7 +30,7 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar maxWidth="xl" position="sticky" isBordered>
-      <NavbarMenuToggle className="sm:hidden"></NavbarMenuToggle>
+      <NavbarMenuToggle className="md:hidden"></NavbarMenuToggle>
 
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="max-w-fit gap-3">
@@ -39,7 +39,7 @@ export const Navbar = () => {
             <p className="font-bold">{MyData.myName}</p>
           </NextLink>
         </NavbarBrand>
-        <ul className="ml-2 hidden justify-start gap-4 lg:flex">
+        <ul className="ml-2 hidden justify-start gap-4 md:flex">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href} isActive={pathname === item.href}>
               <NextLink
@@ -61,7 +61,7 @@ export const Navbar = () => {
         className="hidden basis-1/5 sm:flex sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden gap-2 sm:flex">
+        <NavbarItem className="hidden gap-2 md:flex">
           <Link
             isExternal
             aria-label="Email"
@@ -93,7 +93,7 @@ export const Navbar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className="basis-1 pl-4 sm:hidden" justify="end">
+      <NavbarContent className="basis-1 pl-4 md:hidden" justify="end">
         <Link
           isExternal
           aria-label="Email"
