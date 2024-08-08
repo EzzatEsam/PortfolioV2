@@ -37,27 +37,18 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background bg-gradient-to-r from-indigo-100 to-yellow-50 font-sans antialiased dark:from-slate-900 dark:to-slate-700",
           fontSans.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", enableSystem: true }}>
           <div className="relative flex h-screen flex-col">
             <Navbar />
-            <main className="container mx-auto max-w-7xl flex-grow px-6 pt-16">
-              {children}
+            <main className="w-screen flex-grow bg-gradient-to-r from-indigo-100 to-yellow-50 dark:from-slate-900 dark:to-slate-700">
+              <div className="container m-auto h-full w-full pt-4">
+                {children}
+              </div>
             </main>
-            {/* <footer className="w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-                title="nextui.org homepage"
-              >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">NextUI</p>
-              </Link>
-            </footer> */}
           </div>
         </Providers>
       </body>

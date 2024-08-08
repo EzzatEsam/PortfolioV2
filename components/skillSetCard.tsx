@@ -12,7 +12,7 @@ const SkillSetCard: React.FC<SkillSetCardProps> = ({ skillSet }) => {
       <h2 className="mb-4 text-2xl font-bold text-gray-900 dark:text-gray-100">
         {skillSet.name}
       </h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
         {skillSet.innerSKills.map((skill, index) => (
           <SkillCard key={index} skill={skill} />
         ))}

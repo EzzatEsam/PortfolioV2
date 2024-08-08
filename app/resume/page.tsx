@@ -2,8 +2,9 @@ import { title } from "@/components/primitives";
 
 export default function PricingPage() {
   return (
-    <div className="h-full w-full">
-      <object data="cv.pdf" type="application/pdf" width="100%" height="100%">
+    <div className="flex flex-col">
+      <h1 className="mb-8 text-3xl font-bold">My Resume</h1>
+      <object data="cv.pdf" type="application/pdf" height="600">
         Cv Not Found{" "}
       </object>
     </div>

@@ -14,7 +14,6 @@ import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 import { MyData } from "@/data/data";
-import { Tooltip } from "@nextui-org/tooltip";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
@@ -67,13 +66,7 @@ export const Navbar = () => {
             aria-label="Email"
             href={`mailto:${MyData.links.myEmail}`}
           >
-            <Tooltip
-              showArrow={true}
-              content={`Email: ${MyData.links.myEmail}`}
-              placement="bottom"
-            >
-              <IconEmailOutline className="text-default-500" />
-            </Tooltip>
+            <IconEmailOutline className="text-default-500" />
           </Link>
 
           <Link isExternal aria-label="Itchio" href={MyData.links.myItchIo}>
@@ -89,7 +82,7 @@ export const Navbar = () => {
           <Link isExternal aria-label="Github" href={siteConfig.links.github}>
             <GithubIcon className="text-default-500" />
           </Link>
-          <ThemeSwitch className="pl-4" />
+          <ThemeSwitch />
         </NavbarItem>
       </NavbarContent>
 
@@ -99,13 +92,7 @@ export const Navbar = () => {
           aria-label="Email"
           href={`mailto:${MyData.links.myEmail}`}
         >
-          <Tooltip
-            showArrow={true}
-            content={`Email: ${MyData.links.myEmail}`}
-            placement="bottom"
-          >
-            <IconEmailOutline className="text-default-500" />
-          </Tooltip>
+          <IconEmailOutline className="text-default-500" />
         </Link>
 
         <Link isExternal aria-label="Itchio" href={MyData.links.myItchIo}>
